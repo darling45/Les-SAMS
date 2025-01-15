@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier de Reprise - Les SAMS</title>
+    <style>
+        /* Styles généraux */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: brightness(70%);
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        section p {
+            font-size: 1.2rem;
+            max-width: 70%;
+            margin: 1rem auto;
+            line-height: 1.8;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        section img {
+    max-width: 50%; /* Limite la largeur des images à 80% de la largeur du conteneur */
+    max-height: 300px; /* Limite la hauteur à 400px pour éviter des images trop grandes */
+    object-fit: cover; /* Maintient le bon ratio sans déformer l'image */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+}
+
+
+        nav {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: #ff6b6b;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #ff3b3b;
+        }
+
+        .btn-group {
+            margin-top: 2rem;
+        }
+
+        .btn-group a {
+            text-decoration: none;
+            color: #fff;
+            background: #6c88b0;
+            padding: 0.7rem 1.5rem;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-group a:hover {
+            transform: scale(1.1);
+            background: #3b3f58;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+        }
+
+        footer .discord-btn {
+            background-color: #7289da;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        footer .discord-btn:hover {
+            background-color: #5b6eae;
+        }
+
+        /* Images d'arrière-plan */
+        #preambule::before {
+            background-image: url('https://wallpapers.com/images/hd/fivem-f6shb1he35yl34fk.jpg');
+        }
+
+        #mission::before {
+            background-image: url('https://mascots.gg/blog/content/images/2024/07/hannnes._gta_5_cover_art_--ar_21_4ea5241d-381c-44ce-8f9f-b99e226cc2b8_2.png');
+        }
+
+        #vehicule::before {
+            background-image: url('https://blog.fivemods.io/storage/2024/08/Night-Cityscape-With-Skyscrapers-1300x650.png');
+        }
+
+        #scene::before {
+            background-image: url('https://scontent.fcdg2-1.fna.fbcdn.net/v/t39.30808-6/417181443_397562039279909_7274783701274806368_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=2285d6&_nc_ohc=S3GiyQIg6dQQ7kNvgH7QsNw&_nc_zt=23&_nc_ht=scontent.fcdg2-1.fna&_nc_gid=AQfJalS4Ld7sXgVe2LvfDeh&oh=00_AYBUV-2D3d3yVB_EldbYRiIi4xOlfQztFSGuCpBBv4LCGQ&oe=678DDFAC');
+        }
+
+        #reglement::before {
+            background-image: url('https://fivemods.io/images/graphics-slider/2a.webp');
+        }
+
+        #recrutement::before {
+            background-image: url('https://i.imgur.com/LGgKH1d.jpeg');
+        }
+
+        #morp::before {
+            background-image: url('https://media.invisioncic.com/m279791/monthly_2022_02/large.2_16.5.png.c631012096f5a0afeadf868de776b8bd.png');
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#preambule">Préambule</a>
+        <a href="#mission">Mission</a>
+        <a href="#vehicule">Véhicules & Mapping</a>
+        <a href="#scene">Création de Scène</a>
+        <a href="#reglement">Règlement</a>
+        <a href="#recrutement">Recrutement</a>
+        <a href="#morp">Mort RP</a>
+    </nav>
+
+    <section id="preambule">
+        <h2>Préambule</h2>
+        <img src="https://img.gta5-mods.com/q95/images/sams-speedo-express-ambulance-minipack-vehicles-eup-lore-friendly-add-on/9b05bf-271590_20200420223508_1.jpg" alt="Sauver des vies">
+        <p>Le but premier des SAMS est de sauver des vies. Des formations régulières seront effectuées en interne afin de garantir la bonne qualité des soins et l'évolution des compétences.</p>
+    </section>
+
+    <section id="mission">
+        <h2>Mission</h2>
+        <img src="https://jadesignsfivem.com/cdn/shop/products/218_20220902145022_1.png?v=1662127478&width=1500" alt="Mission sauver des vies">
+        <p>Les missions des SAMS consistent avant tout à garder les citoyens en vie, en assurant des soins rapides, efficaces et coordonnés.</p>
+    </section>
+
+    <section id="vehicule">
+        <h2>Véhicules & Mapping</h2>
+        <img src="https://www.thinlinesanctuary.com/cdn/shop/files/20241029162054_1.png?v=1730216067&width=1080" alt="Véhicules EMS">
+        <p>Les véhicules, mappings et uniformes sont d'une qualité exceptionnelle, et bien que peu utilisés, ils contribueront grandement à une immersion totale et à un RP inoubliable.</p>
+        <div class="btn-group">
+            <a href="https://example.com/vehicules" target="_blank">Voir les Véhicules</a>
+            <a href="https://example.com/mapping" target="_blank">Voir le Mapping</a>
+            <a href="https://example.com/eup" target="_blank">Voir les Uniformes</a>
+        </div>
+    </section>
+
+    <section id="scene">
+        <h2>Création de Scène</h2>
+        <img src="https://s3-screenshots.int-cdn.lcpdfrusercontent.com/monthly_2021_12/271590_20210608122210_1.png.fc7ba71f8a95b91dadf56c623c7097a6.png" alt="Création de scènes">
+        <p>Le but du RP est de s'amuser. Nous nous efforcerons de rendre les scènes EMS divertissantes et drôles, tout en restant cohérentes avec l'univers du serveur.</p>
+    </section>
+
+    <section id="reglement">
+        <h2>Règlement</h2>
+        <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/c48189a6efae1fc2e8431f603c9e1748d81240b6.png" alt="Règlement interne">
+        <p>
+            <strong>Règlement interne :</strong><br>
+            - Respect strict des horaires et des consignes de travail.<br>
+            - Confidentialité sur les actions en cours et les patients.<br>
+            - Collaboration et entraide entre collègues.<br>
+            - Signalement obligatoire des abus ou comportements inappropriés.<br>
+            - Tenue et équipement réglementaires obligatoires en service.<br>
+        </p>
+    </section>
+
+    <section id="recrutement">
+        <h2>Recrutement</h2>
+        <img src="https://www.thinlinesanctuary.com/cdn/shop/files/20241028204022_1.png?v=1730148055&width=1080" alt="Recrutement">
+        <p>Les recrutements se dérouleront soit via Discord avec un Google Forms, soit directement en RP. Une rigueur particulière sera apportée à la sélection des candidats.</p>
+    </section>
+
+    <section id="morp">
+        <h2>Mort RP</h2>
+        <img src="https://www.thinlinesanctuary.com/cdn/shop/files/20241029195722_1.png?v=1730230736&width=1080" alt="Mort RP réglementée">
+        <p>Les morts RP seront strictement réglementées et soumises à validation. Chaque cas sera examiné avec attention pour garantir une cohérence et une immersion maximale.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Les SAMS - Dossier de Reprise</p>
+        <a href="https://discord.com/users/768813271624843266" class="discord-btn" target="_blank">Voir mon Profil Discord</a>
+    </footer>    
+</body>
+</html>
