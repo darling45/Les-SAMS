@@ -12,6 +12,9 @@
             padding: 0;
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
+            max-width: 100vw;
+            overflow-x: hidden; /* Ajouté pour cacher le débordement horizontal */
+            overflow-y: hidden;
         }
 
         section {
@@ -55,14 +58,13 @@
         }
 
         section img {
-    max-width: 50%; /* Limite la largeur des images à 80% de la largeur du conteneur */
-    max-height: 300px; /* Limite la hauteur à 400px pour éviter des images trop grandes */
-    object-fit: cover; /* Maintient le bon ratio sans déformer l'image */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    margin-bottom: 1rem;
-}
-
+            max-width: 50%; /* Limite la largeur des images à 80% de la largeur du conteneur */
+            max-height: 300px; /* Limite la hauteur à 400px pour éviter des images trop grandes */
+            object-fit: cover; /* Maintient le bon ratio sans déformer l'image */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            margin-bottom: 1rem;
+        }
 
         nav {
             position: fixed;
@@ -162,10 +164,116 @@
         #morp::before {
             background-image: url('https://media.invisioncic.com/m279791/monthly_2022_02/large.2_16.5.png.c631012096f5a0afeadf868de776b8bd.png');
         }
+
+        /* Style global pour la zone HRP */
+/* Style global pour la zone HRP */
+/* Zone HRP */
+#hrp::before {
+    background-image: url('https://wallpapers.com/images/hd/fivem-mo1934t7g4cx4y61.jpg');
+}
+
+/* Images dans la zone HRP */
+#hrp img {
+    max-width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Texte HRP */
+#hrp p {
+    font-size: 1.2rem;
+    max-width: 60%;
+    margin: 1rem auto;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    word-wrap: break-word;
+}
+
+/* Ajustement pour réduire la marge et agrandir la largeur du background */
+.presentation-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem; /* Réduire la marge du haut pour rapprocher la section */
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 0; /* Réduire l'espace au-dessus du contenu */
+}
+
+/* Modifications spécifiques à la hauteur du container */
+.presentation-rp, .presentation-hrp {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.8); /* Fond uniforme */
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-height: 10000px; /* Augmenter la hauteur du container */
+    width: 900px; /* Augmenter la largeur du container */
+    margin: 0 auto;
+}
+
+
+
+
+/* Ajuster les titres pour un meilleur espacement */
+.presentation-rp h3, .presentation-hrp h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #837bee;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Ajuster les images */
+.presentation-rp-info img, .presentation-hrp img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.presentation-rp-info ul, .presentation-hrp ul {
+    list-style: none;
+    padding: 0;
+}
+
+.presentation-rp-info li, .presentation-hrp li {
+    font-size: 1.1rem;
+    font-weight: 500; /* Uniformiser l'épaisseur de la police */
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.presentation-rp-info li strong, .presentation-hrp li strong {
+    color: #ff6b6b;
+}
+
+/* Responsivité : ajuster sur écrans plus petits */
+@media (max-width: 768px) {
+    .presentation-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .presentation-rp, .presentation-hrp {
+        padding: 1rem;
+    }
+
+    .presentation-rp-info img {
+        max-width: 200px;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+}
     </style>
 </head>
 <body>
     <nav>
+        <a href="#hrp">Présentation</a>
         <a href="#preambule">Préambule</a>
         <a href="#mission">Mission</a>
         <a href="#vehicule">Véhicules & Mapping</a>
@@ -174,7 +282,43 @@
         <a href="#recrutement">Recrutement</a>
         <a href="#morp">Mort RP</a>
     </nav>
-
+    
+    <section id="hrp">
+        <h2>Présentation</h2>
+        <div class="presentation-container">
+            <div class="presentation-hrp">
+                <h3>Présentation HRP</h3>
+                    <ul>
+                    <li><strong>Nom :</strong> Vincent</li>
+                    <li><strong>Âge :</strong> 22 ans</li>
+                    <li><strong>Profession :</strong> Commercial</li>
+                    <li><strong>Heures de connexion :</strong> 19h à minuit, tous les jours</li>
+                    <li><strong>Nombre d'heure fiveM :</strong> 2422H</li>
+                </ul>
+            </div>
+            
+            <div class="presentation-rp">
+                <h3>Présentation RP</h3>
+                <div class="presentation-rp-info">
+                    <img src="https://image.noelshack.com/fichiers/2025/03/4/1737042590-capture-d-cran-2025-01-16-153959.png"  alt="Photo d'Alex Snow">
+                    <ul>
+                        <li><strong>Nom Prénom :</strong> Alex Snow</li>
+                        <li><strong>Âge :</strong> 38 ans</li>
+                        <li><strong>Nationalité :</strong> Américain</li>
+                        <li><strong>Ville d'origine :</strong> San Diego</li>
+                        <li><strong>Profession :</strong> Agent du Secret Service</li>
+                        <li><strong>Statut marital :</strong> Divorcé</li>
+                        <li><strong>Compétences :</strong> Intervention d'urgence, gestion des situations à haut risque, espionnage</li>
+                        <li><strong>Histoire :</strong> Ancien militaire, reconverti dans le service secret après une carrière d'agent spécial. Il a été envoyé à Los Santos pour maintenir l'ordre dans la ville.</li>
+                        <li><strong>Personnalité :</strong> Loyale, déterminé, discret, mais avec un côté mystérieux qui le rend difficile à cerner.</li>
+                        <li><strong>Objectifs RP :</strong> Maintenir la sécurité, protéger les civils, déjouer les complots, et toujours agir dans l'ombre.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <section id="preambule">
         <h2>Préambule</h2>
         <img src="https://img.gta5-mods.com/q95/images/sams-speedo-express-ambulance-minipack-vehicles-eup-lore-friendly-add-on/9b05bf-271590_20200420223508_1.jpg" alt="Sauver des vies">
@@ -231,7 +375,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Les SAMS - Dossier de Reprise</p>
+        <p>&copy; SNOW | 2025 Les SAMS - Dossier de Reprise</p>
         <a href="https://discord.com/users/768813271624843266" class="discord-btn" target="_blank">Voir mon Profil Discord</a>
     </footer>    
 </body>
